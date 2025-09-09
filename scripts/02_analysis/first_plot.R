@@ -18,12 +18,14 @@ data("data_lionfish")
 
 p <- ggplot(data = data_lionfish,
             mapping = aes(x=size_class, y=total_length_mm)) +
-  geom_boxplot()
+  geom_line()
+
 p
 
 #Export my plot
 
 ggsave(plot = p,
        filename = "results/img/my_first_plot.png")
+
 
 
