@@ -22,10 +22,17 @@ p <- ggplot(data = data_lionfish,
 
 p
 
+p2 <- ggplot(data = data_lionfish,
+            mapping = aes(x=size_class, y=total_length_mm)) +
+  geom_boxplot()
+
+p2
+
 #Export my plot
 
 ggsave(plot = p,
        filename = "results/img/my_first_plot.png")
 
-
+ggsave(plot = p2,
+       filename = "results/img/my_second_plot.png")
 
