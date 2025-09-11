@@ -10,6 +10,7 @@
 #
 ################################################################################  
 
+#Part A
 # In your R Script, create objects of different classes and check their types:
 #   
 ## A character object called my_name with your name
@@ -28,6 +29,7 @@ class(my_age)
 class(is_student)
 
 
+#Part B
 # Let’s see what happens when you try converting objects. In the R script, write and then execute code that will:
 #   
 # Convert your age to character using as.character(my_age)
@@ -49,8 +51,30 @@ con <- my_age |>
 
 con
 
-
 colors <- c("red", "blue", "green", "orange", "yellow")
 
 colors[!colors == "red"]
 
+
+#Part C
+# Clean you environment (use the broom icon)
+# Create a numeric vector called length_m with values: 6, 4.1, 2.8, 5.5, 3.9, 5.8
+# Create a character vector called shark_species with: Great White Shark, Lemon Shark, Bull Shark, Hammerhead Shark, Mako Shark, and Great White Shark (yes, white shark again)
+# How many variables do you have in your environment?
+# How many length observations do we have? Find the length of both vectors using length()
+# How many unique species do we have? (Hint, use |> to build a pipeline)
+# Calculate the mean length of all sharks using mean()
+# Find the maximum length using max()
+
+length_m <- c(6, 4.1, 2.8, 5.5, 3.9, 5.8)
+shark_species <- c("Great White Shark", "Lemon Shark", "Bull Shark", 
+                   "Hammerhead Shark", "Mako Shark", "Great White Shark")
+length(environment())
+length(length_m)
+length(shark_species)
+
+shark_species |> 
+  unique()
+
+mean(length_m)
+max(length_m)
