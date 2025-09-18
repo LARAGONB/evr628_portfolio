@@ -114,6 +114,9 @@ max_shark_o2 <- table1$shark_species[length_m == max(table1$length_m)]; max_shar
 mean_great <- length_m[shark_species == "Great White Shark"] |> 
   mean(); mean_great
 
+remotes::install_github("jcvdav/EVR628tools")
+
+
 
 
 
