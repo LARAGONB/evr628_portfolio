@@ -110,7 +110,17 @@ change_out
 naive_difference_in_differences <- change_in - change_out
 naive_difference_in_differences
 
+##Linear regression
+#Differences in differences analysis
+install.packages("fixest")
+library(fixest)
 
+feols(biomass ~ protected * after, data = data_MPA) |> 
+  etable()
+
+feols(biomass ~ i(protected, after) | id + time, data = data_MPA) |> 
+  etable() # The | id + time part means we are controlling for site and year fixed effects
+#i operator to interact factors with time
 
 
 
